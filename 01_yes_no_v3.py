@@ -1,21 +1,25 @@
 """Lu Yes / No
-Simplifies the input by converting it to lower case. Also, accepts y or n as
-abbreviations. Print result of user choice as well as input - for testing
+Puts the code created in v2 into a loop to make testing easier and more
+efficient
 """
 
-# Ask the user if they have played before
-show_instructions = input("Have you played this game before? :").lower()
+show_instructions = ""
+while show_instructions != "x":
 
-# If they say yes, output 'Program Continues'
-if show_instructions == "yes" or show_instructions == "y":
-    print("program continues")
 
-# If they say no, output 'Display Instructions'
-elif show_instructions == "no" or show_instructions == "n":
-    print("Display instructions")
+    # Ask the user if they have played before
+    show_instructions = input("Have you played this game before? :").lower()
 
-# Otherwise - show error
-else:
-    print("Please answer 'yes' or 'no'")
+    # If they say yes, output 'Program Continues'
+    if show_instructions == "yes" or show_instructions == "y":
+        print("program continues")
 
-print(f"You entered '{show_instructions}'")
+    # If they say no, output 'Display Instructions'
+    elif show_instructions == "no" or show_instructions == "n":
+        print("Display instructions")
+
+    # Otherwise - show error
+    else:
+        print("Please answer 'yes' or 'no'")
+
+    print(f"You entered '{show_instructions}'")
